@@ -3,24 +3,48 @@
         <title>Quiz</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
         <link href="quiz.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     </head>
-    <body>
+    <body class="quiz">
 
-        <div id="quizContainer" class="container">
-            <div class="title">Delloite Quiz</div>
+        <div id="quizContainer" class="container-fluid">
+            <div class="title text-primary text-center">Quiz App</div>
             <div class="questions" id="questions"></div>
-            <label for="option1" class="option"><input type="radio" name="option" value="1"><span id="opt1"></span></label>
-            <label for="option2" class="option"><input type="radio" name="option" value="2"><span id="opt2"></span></label>
-            <label for="option3" class="option"><input type="radio" name="option" value="3"><span id="opt3"></span></label>
-            <label for="option3" class="option"><input type="radio" name="option" value="4"><span id="opt4"></span></label>
-            <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">Next Question</button>
+            <div class="form-row col-md-6">
+                <div class="input-group">
+                    <label for="ip1" class="option">
+                        <input id="ip1" type="radio" name="option">
+                        <span id="opt1"></span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="ip2" class="option">
+                        <input id="ip2" type="radio" name="option">
+                        <span id="opt2"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-row col-md-6">
+                <div class="input-group">
+                    <label for="ip3" class="option">
+                        <input id="ip3" type="radio" name="option">
+                        <span id="opt3"></span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="ip4" class="option">
+                        <input id="ip4" type="radio" name="option">
+                        <span id="opt4"></span></label>
+                </div>
+            </div>
+        <button id="nextButton" class="next-btn btn btn-primary" onclick="loadNextQuestion();">Next Question</button>
         </div>
-
-        <div id="result" class="container result" style="display:none;">
+        <div id="result" class="container-fluid result" style="display:none;">
         </div>
 
         <script src="questions.js"></script>
         <script src="quiz-script.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         
     </body>
 </html>
